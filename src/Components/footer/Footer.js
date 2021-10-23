@@ -4,7 +4,7 @@ import './footer.scss'
 const Footer = () => {
     return (
         <div id="footer">
-            Footer
+            <p>Copyright © 2021 VITC. All rights reserved</p>
         </div>
     )
 }

@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    height: 100vh;
+    position: relative;
+
+    .content {
+        min-height: calc(100vh - 70px);
+        display: flex;
+        background-color: rgb(236, 239, 241);
+        .content_block {
+            width: calc(100% - 250px) !important;
+            height: 100%;
+
+            #routes {
+                min-height: calc(100vh - 120px) !important;
+                background-color: rgb(241, 244, 246);
+                margin-left: 30px;
+            
+                .routes_block {
+                    padding: 30px 30px 30px 5px;
+                }
+            }
+        }
+    }
+}
