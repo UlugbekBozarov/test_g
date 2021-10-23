@@ -58,48 +58,403 @@
         }
     }
 
-    .section_3 {
-        .card {
+
+
+    .section_31 {
+        display: flex;
+        .card { 
+            position: relative;
+            width: 23%;
+            height: 130px !important;
+            margin-left: 1%;
+            margin-right: 1%;
             border: 0;
             cursor: pointer;
             border-radius: 15px;
+            transition: all 0.2s ease-in-out;
 
-            .requense {
-                width: 35px;
-                height: 35px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                border: 3px solid #3bb15a;
-                font-size: 14px;
-                color: #3bb15a;
-                box-shadow: 0px 0px 0px 2px #fff, 0px 0px 4px 4px #cecfcf;
-                font-weight: bold;
+            &.card_3 {
+                height: 160px !important;
             }
 
-            .fraction {
-                width: 60px;
-                height: 30px;
+            .rf_block {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 15px;
-                font-size: 14px;
-                font-weight: bold;
-                color: #97acf2;
-                background-color: #e0f3ff;
+                justify-content: space-between;
+                margin-bottom: 7px;
+                .requense {
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    border: 2.5px solid #3bb15a;
+                    font-size: 14px;
+                    color: #3bb15a;
+                    box-shadow: 0px 0px 0px 2px #fff, 0px 0px 3px 3px #cecfcf;
+                    font-weight: bold;
+                }
+    
+                .fraction {
+                    width: 60px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #97acf2;
+                    background-color: #e0f3ff;
+                    z-index: 9;
+                }
             }
 
             .bodyy {
-                height: calc(100% - 35px);
+                position: relative;
+                height: calc(100% - 35px) !important;
                 display: flex;
-                align-items: center;
+                align-items: center !important;
                 h6 {
                     color: #59517e;
                     font-size: 15px;
+                    z-index: 1;
+                }
+
+                .img {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 60px;
+                    z-index: 0;
+                    color: #e0f3ff;
+                }
+            }
+
+            .card_2.bodyy h6 {
+                font-weight: 400 !important;
+                // font-size: 13px;
+            }
+
+            .card-body {
+                padding-bottom: 5px !important;
+            }
+
+            .active_name {
+                display: none;
+                z-index: 1;
+                .img {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 30px;
+                    font-size: 60px;
+                    z-index: 0;
+                    color: #5aaadd;
+                    z-index: 0;
+                }
+            }
+
+            .card_bottom {
+                display: none;
+            }
+        }
+
+        &.clicked_1 {
+            .card {
+                &.card_1 {
+                    width: 100px;
+                    .card_1.rf_block {
+                        display: block;
+                        .requense {
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-bottom: 20px;
+                        }
+                        .fraction {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    .card_1.bodyy {
+                        display: none;
+                    }
+
+                    &.active {
+                        width: calc(100% - 360px) !important;
+                        height: 140px !important;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        // height: 110%;
+                        background-color: #6bb8e9;
+
+                        .rf_block {
+                            width: 100% !important;
+                            display: flex;
+
+                            .card_1.requense {
+                                margin-bottom: 0 !important;
+                                margin-right: 10px;
+                            }
+                            .card_1.active_name {
+                                display: block;
+                            }
+                            .card_1.fraction {
+                                margin-right: 7% !important;
+                            }
+                        }
+                        .card_1.card_bottom {
+                            display: block;
+                            position: absolute;
+                            width: calc(100% + 350px);
+                            height: 180px;
+                            top: 100%;
+                            left: 0;
+                            right: 0;
+                            background-color: #6bb8e9;
+                            border-radius: 15px;
+                            padding: 20px 0;
+                        }
+                    }
+                    &:nth-child(1).active .card_bottom {
+                        left: 0 !important;
+                        right: 0 !important;
+                        border-top-left-radius: 0;
+                    }
+                    &:nth-child(2).active .card_bottom {
+                        left: -116px !important;
+                    }
+                    &:nth-child(3).active .card_bottom {
+                        left: -233px !important;
+                    }
+                    &:nth-child(4).active .card_bottom {
+                        left: -350px !important;
+                        border-top-right-radius: 0 !important;
+                    }
+                }
+            }
+        }
+        &.clicked_2 {
+            .card.card_2 {
+                width: 100px !important;
+                .card-body {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+                .card_2.rf_block {
+                    display: block !important;
+                    .requense {
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 20px !important;
+                    }
+                    .fraction {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                .card_2.bodyy {
+                    display: none !important;
+                }
+
+                &.active {
+                    width: calc(100% - 480px) !important;
+                    height: 140px !important;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    // height: 110%;
+                    background-color: #3c8ec3;
+
+                    .card_2.rf_block {
+                        width: 100% !important;
+                        display: flex !important;
+                        align-items: center;
+                        justify-content: space-between !important;
+
+                        .requense {
+                            margin-bottom: 0 !important;
+                            margin-right: 10px;
+                        }
+                        .card_2.active_name {
+                            display: block !important;
+                        }
+                        .card_2.fraction {
+                            margin-right: 9%;
+                            // margin-left: 0;
+                        }
+                    }
+                    .card_2.card_bottom {
+                        display: block;
+                        position: absolute;
+                        width: calc(100% + 480px);
+                        height: 190px;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        background-color: #3c8ec3;
+                        border-radius: 15px;
+                        padding: 20px 0;
+                    }
+                }
+                &:nth-child(1).active .card_bottom {
+                    left: 0 !important;
+                    right: 0 !important;
+                    border-top-left-radius: 0;
+                }
+                &:nth-child(2).active .card_bottom {
+                    left: -116px !important;
+                }
+                &:nth-child(3).active .card_bottom {
+                    left: -233px !important;
+                }
+                &:nth-child(4).active .card_bottom {
+                    left: -360px !important;
+                }
+                &:nth-child(5).active .card_bottom {
+                    left: -480px !important;
+                    border-top-right-radius: 0 !important;
                 }
             }
         }
     }
+
+    // .section_32 {
+    //     display: flex;
+    //     .card.card_2 {
+    //         position: relative;
+    //         width: 23%;
+    //         height: 130px !important;
+    //         margin-left: 1%;
+    //         margin-right: 1%;
+    //         border: 0;
+    //         cursor: pointer;
+    //         border-radius: 15px;
+    //         transition: all 0.2s ease-in-out;
+            
+    //         .card-body {
+    //             padding-bottom: 5px !important;
+    //         }
+
+    //         .active_name {
+    //             display: none;
+    //         }
+
+    //         .card_bottom {
+    //             display: none;
+    //         }
+    //         .rf_block {
+    //             display: flex;
+    //             justify-content: space-between;
+    //             margin-bottom: 7px;
+    //             .requense {
+    //                 width: 35px;
+    //                 height: 35px;
+    //                 display: flex;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 border-radius: 50%;
+    //                 background-color: #fff;
+    //                 border: 2.5px solid #3bb15a;
+    //                 font-size: 14px;
+    //                 color: #3bb15a;
+    //                 box-shadow: 0px 0px 0px 2px #fff, 0px 0px 3px 3px #cecfcf;
+    //                 font-weight: bold;
+    //             }
+    
+    //             .fraction {
+    //                 width: 60px;
+    //                 height: 30px;
+    //                 display: flex;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 border-radius: 15px;
+    //                 font-size: 14px;
+    //                 font-weight: bold;
+    //                 color: #97acf2;
+    //                 background-color: #e0f3ff;
+    //             }
+    //         }
+
+    //         .bodyy {
+    //             height: calc(100% - 35px);
+    //             display: flex;
+    //             align-items: center;
+    //             h6 {
+    //                 color: #59517e;
+    //                 font-size: 15px;
+    //             }
+    //         }
+    //     }
+
+    //     &.clicked_2 {
+    //         .card.card_2 {
+    //             width: 100px;
+    //             .rf_block {
+    //                 display: block;
+    //                 .requense {
+    //                     margin-left: auto;
+    //                     margin-right: auto;
+    //                     margin-bottom: 20px;
+    //                 }
+    //                 .fraction {
+    //                     margin-left: auto;
+    //                     margin-right: auto;
+    //                 }
+    //             }
+    //             .bodyy {
+    //                 display: none;
+    //             }
+
+    //             &.active {
+    //                 width: calc(100% - 330px) !important;
+    //                 height: 140px !important;
+    //                 border-bottom-left-radius: 0;
+    //                 border-bottom-right-radius: 0;
+    //                 // height: 110%;
+    //                 background-color: #3c8ec3;
+
+    //                 .rf_block {
+    //                     display: flex;
+
+    //                     .requense {
+    //                         margin-bottom: 0 !important;
+    //                         margin-right: 10px;
+    //                     }
+    //                     .active_name {
+    //                         display: block;
+    //                     }
+    //                     .fraction {
+    //                         margin-right: 0 !important;
+    //                     }
+    //                 }
+    //                 .card_bottom {
+    //                     display: block;
+    //                     position: absolute;
+    //                     width: calc(100% + 350px);
+    //                     height: 180px;
+    //                     top: 100%;
+    //                     left: 0;
+    //                     right: 0;
+    //                     background-color: #3c8ec3;
+    //                     border-radius: 15px;
+    //                 }
+    //             }
+    //             &:nth-child(1).active .card_bottom {
+    //                 left: 0 !important;
+    //                 right: 0 !important;
+    //                 border-top-left-radius: 0;
+    //             }
+    //             &:nth-child(2).active .card_bottom {
+    //                 left: -116px !important;
+    //             }
+    //             &:nth-child(3).active .card_bottom {
+    //                 left: -233px !important;
+    //             }
+    //             &:nth-child(4).active .card_bottom {
+    //                 left: -350px !important;
+    //                 border-top-right-radius: 0 !important;
+    //             }
+    //         }
+    //     }
+    // }
 }
